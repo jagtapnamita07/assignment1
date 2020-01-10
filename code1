@@ -36,7 +36,7 @@ sum=0;
             sum=sum+a[i].score[j];
 
           }
-z=z+sum;
+z+=sum;
 printf("\nsum of score of trainee no %d is =%lf",i+1,sum);
 sum=0;
  }
@@ -44,7 +44,7 @@ float u=0;
 u=z/2;
  printf("\n avg  score of all trainee = %lf",u);
 
- //printf("\navng score of perticular module");
+
   tot=0;
  for(int i=0;i<2;i++)
   {
