@@ -1,0 +1,58 @@
+#include<stdio.h>
+
+struct trainee
+{
+  int empid;
+  char name[20];
+  int age;
+  double score[5];
+
+};
+
+int main() {
+
+struct trainee a[2];
+double tot,avg,sum,z;
+for(int i=0;i<2;i++)
+  {
+    scanf("%d",&a[i].empid);scanf("%s",a[i].name);scanf("%d",&a[i].age);
+    for(int j=0;j<5;j++)
+    scanf("%lf ",&a[i].score[j]);
+  }
+
+for(int i=0;i<2;i++)
+  {
+    printf("\n \n");printf("empid=%d ",a[i].empid );printf("name=%s ",a[i].name);printf("age=%d  ",a[i].age);
+    for(int j=0;j<5;j++)
+    printf("%lf ",a[i].score[j]);
+    printf("\n \n");
+  }
+
+sum=0;
+ for(int i=0;i<2;i++)
+  {
+    for(int j=0;j<5;j++)
+          {
+            sum=sum+a[i].score[j];
+
+          }
+z=z+sum;
+printf("\nsum of score of trainee no %d is =%lf",i+1,sum);
+sum=0;
+ }
+float u=0;
+u=z/2;
+ printf("\n avg  score of all trainee = %lf",u);
+
+ //printf("\navng score of perticular module");
+  tot=0;
+ for(int i=0;i<2;i++)
+  {
+     tot=tot+a[i].score[2];
+
+ }
+ avg=(tot/2);
+printf("\navg of score of module 3 is %lf",avg);
+
+ return 0;
+}
